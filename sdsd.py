@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import time as ts
 from datetime import time
-import plotly.express as px
+import plotly as px
 
 st.set_page_config(page_title="Interactive Data Science Dashboard", layout="wide")
 

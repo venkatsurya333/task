@@ -8,7 +8,7 @@ st.set_page_config(page_title="Interactive Data Science Dashboard", layout="wide
 
 # Sidebar Navigation
 st.sidebar.title("🔀 Navigation")
-page = st.sidebar.radio("Go to", ["Login", "Timer", "Dashboard"])
+page = st.sidebar.radio("Go to", ["Login", "Timer", "Dashboard","chat"])
 
 # -------------------- LOGIN PAGE --------------------
 if page == "Login":
@@ -95,3 +95,16 @@ elif page == "Dashboard":
         st.table(sample_df)
     with col2:
         st.dataframe(sample_df)
+elif page == "chat":
+    st.markdown(
+        """
+<iframe class="chatbot-popup"
+        src="https://www.chatbase.co/chatbot-iframe/AbakbSSL2ccqZllt_3WHO"
+        allow="microphone;"
+        frameborder="0"
+        width="100%"
+        height="500">
+</iframe>
+        """,
+        unsafe_allow_html=True
+    )
